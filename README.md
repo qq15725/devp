@@ -27,10 +27,9 @@ npm i -g devp
 ## Roadmap
 
 - [x] Http 代理
-- [x] Socket5 代理
-- [x] 中间人 Https 明文解码
+- [x] Https 中间人明文解密
+- [ ] Socket5 代理
 - [ ] Web 页查看所有网络请求
 - [ ] 链式多层代理
 - [ ] pac
-- [ ] 软路由
 - [ ] 自定义插件

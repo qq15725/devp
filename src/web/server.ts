@@ -9,7 +9,7 @@ export function createWebServer(port: number) {
   app.use(router.routes())
   app.use(router.allowedMethods())
   router
-    .get('/', async (ctx, next) => {
+    .get('/ca', async (ctx, next) => {
       ctx.set('Access-Control-Allow-Origin', '*')
       ctx.set('Content-Type', 'application/x-x509-ca-cert')
       ctx.set('Content-Disposition', 'attachment; filename="rootCA.crt"')

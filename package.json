@@ -1,21 +1,21 @@
 {
-  "name": "starter-ts-cli",
+  "name": "devp",
   "type": "module",
-  "version": "0.0.2",
+  "version": "0.0.0",
   "packageManager": "pnpm@7.9.0",
   "description": "Starter template for TypeScript command line interface library",
   "author": "wxm",
   "license": "MIT",
-  "homepage": "https://github.com/qq15725/starter-ts-cli",
+  "homepage": "https://github.com/qq15725/devp",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/qq15725/starter-ts-cli.git"
+    "url": "git+https://github.com/qq15725/devp.git"
   },
   "engines": {
     "node": ">=14.18.1"
   },
   "bugs": {
-    "url": "https://github.com/qq15725/starter-ts-cli/issues"
+    "url": "https://github.com/qq15725/devp/issues"
   },
   "keywords": [],
   "exports": {
@@ -45,7 +45,10 @@
   },
   "devDependencies": {
     "@qq15725/eslint-config": "^1.1.0",
+    "@types/koa": "^2.15.0",
+    "@types/koa-router": "^7.4.8",
     "@types/node": "^18.15.3",
+    "@types/node-forge": "^1.3.11",
     "bumpp": "^9.0.0",
     "conventional-changelog-cli": "^2.2.2",
     "eslint": "^8.36.0",
@@ -55,6 +58,9 @@
   },
   "dependencies": {
     "cac": "^6.7.14",
-    "consola": "^2.15.3"
+    "consola": "^2.15.3",
+    "koa": "^2.15.2",
+    "koa-router": "^12.0.1",
+    "node-forge": "^1.3.1"
   }
 }

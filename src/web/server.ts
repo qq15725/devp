@@ -1,14 +1,11 @@
-import fs from 'fs'
+import fs from 'node:fs'
+import path from 'node:path'
 import Koa from 'koa'
 import Router from 'koa-router'
 import { caCertPath } from '../cert'
 
 export function createWebServer(port: number) {
-  const app = new Koa()
   const router = new Router()
-  app.use(router.routes())
-  app.use(router.allowedMethods())
-  router
     .get('/ca', async (ctx, next) => {
       ctx.set('Access-Control-Allow-Origin', '*')
       ctx.set('Content-Type', 'application/x-x509-ca-cert')
@@ -16,5 +13,15 @@ export function createWebServer(port: number) {
       ctx.body = fs.readFileSync(caCertPath)
       next()
     })
-  app.listen(port)
+    .get('/', async (ctx, next) => {
+      ctx.set('Access-Control-Allow-Origin', '*')
+      ctx.set('Content-Type', 'text/html;charset=utf-8')
+      ctx.body = fs.readFileSync(path.join(__dirname, '../../web/index.html'))
+      next()
+    })
+
+  return new Koa()
+    .use(router.routes())
+    .use(router.allowedMethods())
+    .listen(port)
 }

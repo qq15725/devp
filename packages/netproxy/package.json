@@ -1,0 +1,64 @@
+{
+  "name": "netproxy",
+  "type": "module",
+  "version": "0.0.0",
+  "description": "Starter template for TypeScript command line interface library",
+  "author": "wxm",
+  "license": "MIT",
+  "homepage": "https://github.com/qq15725/netproxy",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/qq15725/netproxy.git"
+  },
+  "engines": {
+    "node": ">=14.18.1"
+  },
+  "bugs": {
+    "url": "https://github.com/qq15725/netproxy/issues"
+  },
+  "keywords": [],
+  "exports": {
+    ".": {
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "bin": {
+    "cli": "./bin/index.mjs"
+  },
+  "files": [
+    "bin",
+    "dist"
+  ],
+  "scripts": {
+    "stub": "unbuild --stub",
+    "lint": "eslint src",
+    "test": "vitest",
+    "build": "unbuild",
+    "cli": "node ./bin/index.mjs"
+  },
+  "devDependencies": {
+    "@types/koa": "^2.15.0",
+    "@types/koa-router": "^7.4.8",
+    "@types/node": "^18.15.3",
+    "@types/node-forge": "^1.3.11",
+    "@types/ssh2": "^1.15.0",
+    "@types/ws": "^8.5.10",
+    "unbuild": "^1.1.2"
+  },
+  "dependencies": {
+    "cac": "^6.7.14",
+    "consola": "^2.15.3",
+    "koa": "^2.15.2",
+    "koa-router": "^12.0.1",
+    "node-forge": "^1.3.1",
+    "socksv5": "^0.0.6",
+    "ssh2": "^1.15.0",
+    "ws": "^8.16.0",
+    "@netproxy/web": "workspace:*",
+    "@netproxy/shared": "workspace:*"
+  }
+}

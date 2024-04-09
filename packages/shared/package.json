@@ -1,0 +1,41 @@
+{
+  "name": "@netproxy/shared",
+  "type": "module",
+  "version": "0.0.0",
+  "description": "Starter template for TypeScript command line interface library",
+  "author": "wxm",
+  "license": "MIT",
+  "homepage": "https://github.com/qq15725/netproxy",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/qq15725/netproxy.git"
+  },
+  "engines": {
+    "node": ">=14.18.1"
+  },
+  "bugs": {
+    "url": "https://github.com/qq15725/netproxy/issues"
+  },
+  "keywords": [],
+  "exports": {
+    ".": {
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "stub": "unbuild --stub",
+    "lint": "eslint src",
+    "test": "vitest",
+    "build": "unbuild"
+  },
+  "devDependencies": {
+    "unbuild": "^1.1.2"
+  }
+}

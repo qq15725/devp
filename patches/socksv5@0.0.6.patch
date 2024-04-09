@@ -1,0 +1,11 @@
+diff --git a/lib/client.js b/lib/client.js
+index ff212e58b8ff26c896e580f753f203dcb7ad2923..d17db76c56f3b3b8a29a27da250b4dec1998b16d 100644
+--- a/lib/client.js
++++ b/lib/client.js
+@@ -1,5 +1,5 @@
+ var net = require('net'),
+-    normalizeConnectArgs = net._normalizeConnectArgs,
++    normalizeConnectArgs = net._normalizeArgs,
+     dns = require('dns'),
+     util = require('util'),
+     inherits = util.inherits,
